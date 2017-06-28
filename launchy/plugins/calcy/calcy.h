@@ -24,9 +24,9 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #include "plugin_interface.h"
 #include "gui.h"
 #include <QRegExp>
-#include <boost/shared_ptr.hpp>
+#include <memory>
 
-using namespace boost;
+using namespace std;
 
 
 class calcyPlugin : public QObject, public PluginInterface

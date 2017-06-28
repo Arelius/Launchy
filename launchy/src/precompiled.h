@@ -57,8 +57,8 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #endif
 
 #include <stdlib.h>
-#include <boost/shared_ptr.hpp>
+#include <memory>
 
-using namespace boost;
+using namespace std;
 
 #endif // PRECOMPILED_H

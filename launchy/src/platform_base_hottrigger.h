@@ -22,10 +22,10 @@
 #define GLOBALSHORTCUTTRIGGER_H
 
 #include "platform_base_hotkey.h"
-#include <boost/shared_ptr.hpp>
+#include <memory>
 #include <QObject>
 
-using namespace boost;
+using namespace std;
 
 class GlobalShortcutManager::KeyTrigger : public QObject
 {

@@ -7,15 +7,7 @@ PRECOMPILED_HEADER = precompiled.h
 QT += network
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets winextras
 
-# Check for requried environment variables
-!exists($$(BOOST_DIR)) {
- error("The BOOST_DIR environment variable is not defined.")
-}
-
 INCLUDEPATH += ../common
-INCLUDEPATH += $$(BOOST_DIR)
-
-TR_EXCLUDE += $$(BOOST_DIR)/*
 
 SOURCES = main.cpp \
     globals.cpp \
