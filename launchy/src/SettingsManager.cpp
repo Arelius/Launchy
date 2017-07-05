@@ -79,13 +79,17 @@ QList<QString> SettingsManager::directory(QString name) const
 
 QString SettingsManager::catalogFilename() const
 {
-	return configDirectory(portable) + dbName;
+    QString dbPath = gSettings->value("dbName", configDirectory(portable) + dbName).toString();
+    dbPath = platform->expandEnvironmentVars(dbPath);
+    return dbPath;
 }
 
 
 QString SettingsManager::historyFilename() const
 {
-	return configDirectory(portable) + historyName;
+    QString histPath = gSettings->value("historyName", configDirectory(portable) + historyName).toString();
+    histPath = platform->expandEnvironmentVars(histPath);
+    return histPath;
 }
 
 
